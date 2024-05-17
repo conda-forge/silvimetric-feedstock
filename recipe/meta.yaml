@@ -1,6 +1,6 @@
 {% set name = "silvimetric" %}
-{% set version = "1.2.0" %}
-{% set sha256 = "1494ac17e9a13bc7eb3278847ccdcdb87ad9fdc55eb0b0c39ce7486aa7aab465" %}
+{% set version = "1.2.1" %}
+{% set sha256 = "95c1c949dd9c0b75a1c23d282f056da48336a32dde0e58dfb1661a8d089beacb" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 build:
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - silvimetric = silvimetric.cli.cli:cli
 
@@ -29,7 +29,6 @@ requirements:
     - gdal
     - python-pdal
     - pandas
-    - line_profiler
     - tiledb-py
     - scipy
     - dill
