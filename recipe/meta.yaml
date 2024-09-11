@@ -1,6 +1,6 @@
 {% set name = "silvimetric" %}
-{% set version = "1.2.1" %}
-{% set sha256 = "95c1c949dd9c0b75a1c23d282f056da48336a32dde0e58dfb1661a8d089beacb" %}
+{% set version = "1.2.2" %}
+{% set sha256 = "57e05fa95f3d9ef742a97342868cb4f13ab1b7d5646de0d886d280e3bd6d088d" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 build:
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
-  number: 1
+  number: 0
   entry_points:
     - silvimetric = silvimetric.cli.cli:cli
 
