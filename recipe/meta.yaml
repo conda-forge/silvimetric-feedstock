@@ -1,13 +1,13 @@
 {% set name = "silvimetric" %}
-{% set version = "1.2.3" %}
-{% set sha256 = "8400d7cfb80893b753f072a9947eca2f6b1c96517bf817736dbb73303dd80120" %}
+{% set version = "1.3.0" %}
+{% set sha256 = "0961385447e41f181ab9f2ec78680870371462da0d35d19985f5c92e78e91515" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/silvimetric-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/silvimetric-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -33,6 +33,8 @@ requirements:
     - tiledb-py
     - scipy
     - dill
+    - typing_extensions
+    - lmoments3
 
 test:
   commands:
