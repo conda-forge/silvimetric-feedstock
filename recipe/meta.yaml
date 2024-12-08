@@ -33,6 +33,8 @@ requirements:
     - tiledb-py
     - scipy
     - dill
+    - typing_extensions
+    - lmoments3
 
 test:
   commands:
