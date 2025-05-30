@@ -13,17 +13,17 @@ source:
 build:
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - silvimetric = silvimetric.cli.cli:cli
 
 requirements:
   host:
-    - python  >3.8
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python  >3.8
+    - python >={{ python_min }}
     - click
     - dask
     - pyproj
@@ -37,6 +37,8 @@ requirements:
     - lmoments3
 
 test:
+  requires:
+    - python {{ python_min }}
   commands:
     - python -c "import silvimetric"
     - silvimetric --help
