@@ -1,6 +1,6 @@
 {% set name = "silvimetric" %}
-{% set version = "1.4.0" %}
-{% set sha256 = "fb777986aaeeaf98af2c4b72877a3a99ddacc041ac0a1e63759d5135758f95f4" %}
+{% set version = "2.0.0" %}
+{% set sha256 = "b8dc616c812997fb8bc768bd43dc721b5697cb40b8915e99321429dff8beb968" %}
 
 package:
   name: {{ name|lower }}
